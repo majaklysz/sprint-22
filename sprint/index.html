@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haarhuus</title>
+
+    <style>
+      /*siiri*/
+      .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        /*nav fix position to top*/
+        overflow: hidden;
+        background-color: #fcf9ee;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .navigation .logo {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+        margin: 15px 50px 15px 15px;
+      }
+
+      .navigation .link {
+        font-family: Nobel;
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px 10px 10px;
+        padding: 10px 10px 10px;
+      }
+
+      .navigation a:hover {
+        color: #46725b;
+      }
+
+      .navigation :active {
+        font-weight: bold;
+      }
+
+      .navigation .split {
+        font-family: Nobel, Book;
+        font-size: 15px;
+        margin-left: auto;
+        color: white;
+        border: none;
+        background-color: #46725b;
+        height: fit-content;
+        width: fit-content;
+        padding: 15px 45px;
+        border-radius: 23px;
+        transition: all 200ms ease;
+        margin-top: 5px;
+      }
+
+      .navigation .split:hover {
+        background-color: #b9a052;
+      }
+
+      .navigation .dropdown {
+        width: 20px;
+        height: auto;
+        margin: 10px 50px 10px;
+        padding: 10px 10px 10px;
+      }
+
+      body {
+        background-color: #fcf9ee;
+      }
+
+      h1 {
+        font-weight: normal;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        width: 574px;
+      }
+
+      button {
+        background-color: #46725b;
+        border: none;
+        border-radius: 23px;
+        font-family: Nobel, Book;
+        color: white;
+        padding: 15px 45px;
+        font-size: 16px;
+        margin-top: 50px;
+        transition: all 200ms ease;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: #b9a052;
+      }
+      .products {
+        background-color: rgba(70, 114, 91, 0.6);
+        color: white;
+        font-family: Nobel, Book;
+        padding: 50px 980px 55px 150px;
+        margin-left: 10%;
+        position: absolute;
+        top: 1848px;
+        margin-top: 160px;
+        margin-bottom: 160px;
+      }
+
+      .pr_photo {
+        position: absolute;
+        top: 1970px;
+        right: 193px;
+        z-index: 2;
+        width: 553px;
+        height: auto;
+      }
+
+      .services {
+        background-color: rgba(137, 173, 133, 0.6);
+        color: white;
+        font-family: Nobel, Book;
+        padding: 50px 150px 55px 981px;
+        margin-right: 10%;
+        position: absolute;
+        top: 2615px;
+        margin-top: 160px;
+        margin-bottom: 160px;
+      }
+
+      .se_photo {
+        position: absolute;
+        top: 2750px;
+        left: 190px;
+        z-index: 2;
+        width: 653px;
+        height: auto;
+      }
+
+      h1 {
+        font-weight: normal;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        width: 574px;
+      }
+
+      /*Julka*/
+
+      .button_read {
+        background-color: #46725b;
+        border: none;
+        border-radius: 23px;
+        font-family: Nobel, Book;
+        color: white;
+        padding: 15px 45px;
+        font-size: 16px;
+        margin-top: 50px;
+        transition: all 200ms ease;
+      }
+
+      .button_read:hover {
+        cursor: pointer;
+        background-color: #b9a052;
+      }
+
+      .owner {
+        background-color: rgba(137, 173, 133, 0.6);
+        color: white;
+        font-family: Nobel, Book;
+        padding: 50px 150px 55px 981px;
+        margin-right: 10%;
+        position: absolute;
+        top: 1057px;
+        margin-top: 160px;
+        margin-bottom: 160px;
+      }
+      .owner_photo {
+        position: absolute;
+        top: 1125px;
+        left: 190px;
+        z-index: 2;
+        width: 553px;
+        height: auto;
+      }
+
+      .footer {
+        position: absolute;
+        top: 3450px;
+        width: 1692px;
+        height: 40%;
+        background-color: rgb(70, 114, 91);
+        margin-top: 160px;
+        font-family: Nobel, Book;
+        color: white;
+        padding-top: 50px;
+        padding-left: 200px;
+      }
+      ul {
+        list-style: none;
+        padding: 0px;
+      }
+
+      .spacing {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        list-style: none;
+        padding: 0px;
+        text-align: left;
+        column-gap: 1px;
+      }
+
+      h4 {
+        font-size: 24px;
+        font-weight: normal;
+      }
+      .column {
+        float: left;
+        width: 25%;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      a {
+        transition: all 200ms ease;
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        cursor: pointer;
+        color: #b9a052;
+        font-size: 20px;
+      }
+      .middle_photos {
+        position: absolute;
+        top: 190px;
+      }
+
+      .img {
+        width: 100%;
+      }
+
+      .aaa {
+        position: absolute;
+        top: 750px;
+        left: 810px;
+      }
+
+      .final {
+        position: absolute;
+        top: 880px;
+        right: 60px;
+        color: rgba(128, 128, 128, 0.726);
+        font-family: Nobel, Book;
+      }
+
+      .final:hover {
+        cursor: pointer;
+      }
+      .booking:hover {
+        font-size: 15px;
+        color: white;
+      }
+      .o2 {
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="navigation">
+      <a href="sprint.html"
+        ><img src="../sprint/logo.png" alt="logo" class="logo"
+      /></a>
+      <a href="sprint.html" class="link">Home</a>
+      <a href="sprint.html" class="link">About</a>
+      <a href="sprint.html" class="link">Services</a>
+      <a href="sprint.html" class="link">Products</a>
+      <a href="sprint.html" class="link">Contact</a>
+      <button class="split">
+        <a
+          href="https://haarhuus.planway.com/"
+          target="”_blank”"
+          class="booking"
+          >BOOK NOW</a
+        >
+      </button>
+
+      <a href="sprint.html"
+        ><img src="../sprint/globe.png" alt="language" class="dropdown"
+      /></a>
+    </section>
+
+    <div class="middle_photos">
+      <img class="img" src="../sprint/photos.png" alt="cuting hair" />
+    </div>
+
+    <button class="aaa">
+      <a
+        href="https://haarhuus.planway.com/"
+        target="”_blank”"
+        class="booking o2"
+        >BOOK AN APPOINTMENT</a
+      >
+    </button>
+
+    <div class="final">
+      <h3 onclick="topFunction()" id="myBtn">↓READ MORE ABOUT US↓</h3>
+    </div>
+
+    <img src="../sprint/products.png" alt="products" class="pr_photo" />
+    <div class="products">
+      <h1>Products</h1>
+      <p>
+        Nashi Argan is a completely fantastic revolutionary brand within argan
+        oils. Here you get a brand that stands out with its certified organic
+        argan oil, as well as certified organic linseed oil and packaging made
+        from recycled materials. The products are made in Italy at a CO2-neutral
+        company, so that the environment / climate is compensated as much as
+        possible. Argan oil is absolutely phenomenal for providing moisture and
+        care to the hair and leaves the hair with both shine and strength. In
+        addition, these products are also free of parabens, sls and sles. A
+        selection of Nashi's products can be purchased at Haarhuus.
+      </p>
+      <button class="button_read">READ MORE</button>
+    </div>
+
+    <img
+      src="../sprint/servicephoto.png"
+      alt="service photo"
+      class="se_photo"
+    />
+
+    <div class="services">
+      <h1>Services</h1>
+      <p>
+        If you simply want new life for your hair, Henriette also offers a
+        thorough and deeply repairing hair treatment with Oribes Luxury
+        Treatments, K18 or Olaplex. By using these products, your damaged hair
+        is allowed to rebuild and is left shiny and stronger. Ask Henriette
+        about which restorative treatment suits your hair best.If you simply
+        want new life for your hair, Henriette also offers a thorough and deeply
+        repairing hair treatment with Oribes Luxury Treatments, K18 or Olaplex.
+        By using these products, your damaged hair is allowed to rebuild and is
+        left shiny and stronger. Ask Henriette about which restorative treatment
+        suits your hair best.
+      </p>
+      <button class="button_read">READ MORE</button>
+    </div>
+
+    <img
+      src="../sprint/OWNER.jpeg"
+      alt="Haarhuus & Henriette"
+      class="owner_photo"
+    />
+    <div class="owner">
+      <h1>Haarhuus & Henriette</h1>
+      <p>
+        Frisørsalonen Haarhuus ligger midt i Latinerkvarteret i Aarhus, som er
+        kendt for at summe af liv, lækre butikker og en unik stemning. Haarhuus
+        er en del af denne utrolige lille verden, som Latiner-kvarteret er. Når
+        du træder ind i frisørsalonen Haarhuus, mærker du denne følelse.
+        Frisørsalonen er prydet af et smukt glas loft med stuk, fine
+        genbrugsmøbler og et helt fantastisk lysindfald på solskinsdagene. Denne
+        lille, hyggelige frisørsalon har perfekte rammer for den gode
+        frisøroplevelse, du får hos Haarhuus. Henriette er frisøren bag
+        Haarhuus. Hun har en lang og bred erfaring med behandling af hår, og
+        derfor kan du forvente klassiske teknikker af høj kvalitet. Hun er
+        dygtig til både herrer og damer. Hos Henriette finder du.
+      </p>
+      <button class="button_read">READ MORE</button>
+    </div>
+
+    <footer class="footer">
+      <div class="column space_left">
+        <h4>LINKS</h4>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h4>CONTACT</h4>
+        <ul class="contact">
+          <li>Studsgade 3</li>
+          <li class="bottom_space">8000 Aarhus C</li>
+          <li><a href="mailto:info@haarhuus.dk">info@haarhuus.dk</a></li>
+          <li>+45 6127 3073</li>
+        </ul>
+      </div>
+
+      <div class="column c3">
+        <h4>OPENING HOURS</h4>
+        <ul class="spacing">
+          <li>Monday</li>
+          <li>Tuesday</li>
+          <li>Wednesday</li>
+          <li>Thursday</li>
+          <li>Friday</li>
+          <li>Saturday</li>
+          <li>Sunday</li>
+          <li>09-16</li>
+          <li>09-17</li>
+          <li>09-16</li>
+          <li>09-17</li>
+          <li>09-14</li>
+          <li>Closed</li>
+          <li>Closed</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h4>BOOKING</h4>
+        <ul>
+          <li>
+            <a href="https://haarhuus.planway.com/" target="”_blank”"
+              >Book an appointment</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/Haarhuus/@56.1591256,10.2073677,17z/data=!3m1!4b1!4m6!3m5!1s0x464c3f949e5e8087:0xa26a4368b87cea3c!8m2!3d56.1591256!4d10.2095564!16s%2Fg%2F11gcfszbsq"
+              target="”_blank”"
+              >How to find us</a
+            >
+          </li>
+        </ul>
+        <ul class="social-network social-circle">
+          <li>
+            <a
+              href="https://www.facebook.com/Haarhuus/"
+              target="”_blank”"
+              class="icoFacebook"
+              title="Facebook"
+              ><img src="../sprint/fb.01.png" alt=""
+            /></a>
+
+            <a
+              href="https://www.instagram.com/haarhuus/?hl=da"
+              target="”_blank”"
+              class="icoInstagram"
+              title="Instagram"
+            >
+              <img src="../sprint/in.01.png" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div>
+          <p>&copy; Copyright 2022 - Haarhuus. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let mybutton = document.getElementById("myBtn");
+      function topFunction() {
+        document.documentElement.scrollTop = 1000;
+      }
+    </script>
+  </body>
+</html>

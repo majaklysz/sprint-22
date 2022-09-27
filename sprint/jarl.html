@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your title</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /**
+ * file: styles.css
+ **/
+
+      #one {
+        position: relative;
+        width: 111px;
+        animation-name: perAnimate1;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        left: 400px;
+        top: 75px;
+      }
+
+      @keyframes perAnimate1 {
+        0% {
+          opacity: 1;
+        }
+
+        15% {
+          opacity: 0;
+        }
+
+        85% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      #two {
+        position: relative;
+        width: 111px;
+        animation-name: perAnimate2;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        left: 400px;
+        top: 75px;
+      }
+
+      @keyframes perAnimate2 {
+        0% {
+          opacity: 0;
+        }
+
+        5% {
+          opacity: 0;
+        }
+
+        20% {
+          opacity: 1;
+        }
+
+        35% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #three {
+        position: relative;
+        width: 111px;
+        animation-name: perAnimate3;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        left: 400px;
+        top: 75px;
+      }
+
+      @keyframes perAnimate3 {
+        0% {
+          opacity: 0;
+        }
+
+        25% {
+          opacity: 0;
+        }
+
+        40% {
+          opacity: 1;
+        }
+
+        55% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #four {
+        position: relative;
+        width: 111px;
+        animation-name: perAnimate4;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        left: 400px;
+        top: 75px;
+      }
+
+      @keyframes perAnimate4 {
+        0% {
+          opacity: 0;
+        }
+
+        45% {
+          opacity: 0;
+        }
+
+        60% {
+          opacity: 1;
+        }
+
+        75% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #five {
+        position: relative;
+        width: 111px;
+        animation-name: perAnimate5;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        left: 400px;
+        top: 75px;
+      }
+
+      @keyframes perAnimate5 {
+        0% {
+          opacity: 0;
+        }
+
+        65% {
+          opacity: 0;
+        }
+
+        80% {
+          opacity: 1;
+        }
+
+        95% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #six {
+        position: relative;
+        left: -50px;
+        top: 75px;
+      }
+
+      #seven {
+        position: relative;
+        left: 900px;
+        top: 75px;
+      }
+
+      img {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+      }
+
+      /*
+.imgA1 {
+  z-index: 2;
+}
+.imgA2 {
+  z-index: 3;
+}
+.imgA3 {
+    z-index: 5;
+  }
+.imgA4 {
+    z-index: 7;
+  }
+.imgA5 {
+    z-index: 9;
+  }
+.imgB1 {
+    z-index: 10;
+}
+.imgB2 {
+    z-index: 11;
+}
+*/
+
+      .row {
+        z-index: 2;
+      }
+
+      .row2 {
+        z-index: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="row2">
+        <div id="six">
+          <img class="imgB1" src="../sprint/cr2/hc2.1.png" alt="haircut" />
+        </div>
+        <div id="seven">
+          <img class="imgB2" src="../sprint/cr3/hc3.1.png" alt="haircut" />
+        </div>
+      </div>
+
+      <div id="one">
+        <img class="imgA1" src="../sprint/cr1/hc1.1.png" alt="haircut" />
+      </div>
+
+      <div id="two">
+        <img class="imgA2" src="../sprint/cr1/hc1.2.png" alt="haircut" />
+      </div>
+
+      <div id="three">
+        <img class="imgA3" src="../sprint/cr1/hc1.3.png" alt="haircut" />
+      </div>
+
+      <div id="four">
+        <img class="imgA4" src="../sprint/cr1/hc1.4.png" alt="haircut" />
+      </div>
+
+      <div id="five">
+        <img class="imgA5" src="../sprint/cr1/hc1.5.png" alt="haircut" />
+      </div>
+    </div>
+
+    <script src="js/js.js"></script>
+  </body>
+</html>
